@@ -61,3 +61,11 @@ cd GMN
 python gnn.py --test -c ./model_checkpoint -o ./Dataset-1-new_testing --featuresdir ../strand -b ../../Roberta
 ```
 
+
+
+## Results
+
+data下存放不同数据集的不同模型计算结果，即上一步计算得到的csv文件拷贝过来后，需要先通过ipynb删除不需要的列
+
+最后通过res目录中的ipynb计算最终结果
+

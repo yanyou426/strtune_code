@@ -695,18 +695,18 @@ def create_functions_dict(input_folder, opc_dict):
                     'opc': np_to_scipy_sparse(f_mat_cfg),
                 }
                 strandaddr2inst.pop('0')
-                functions_dict2[idb_path][hex(int(fva))] = {
-                    'cfg': np_to_scipy_sparse(CFG_adj_mat),
-                    'ddg': np_to_scipy_sparse(DDG_adj_mat),
-                    'opc': np_to_scipy_sparse(f_mat_cfg),
-                    'cdg': np_to_scipy_sparse(CDG_adj_mat),
-                    'opc_cdg': np_to_scipy_sparse(f_mat_cdg),
-                    'strandinfo': strandaddr2inst
-                }
+                # functions_dict2[idb_path][hex(int(fva))] = {
+                #     'cfg': np_to_scipy_sparse(CFG_adj_mat),
+                #     'ddg': np_to_scipy_sparse(DDG_adj_mat),
+                #     'opc': np_to_scipy_sparse(f_mat_cfg),
+                #     'cdg': np_to_scipy_sparse(CDG_adj_mat),
+                #     'opc_cdg': np_to_scipy_sparse(f_mat_cdg),
+                #     'strandinfo': strandaddr2inst
+                # }
                 # break
         # break
 
-    print(ind)
+    # print(ind)
             
     return functions_dict, functions_dict2
 
@@ -757,9 +757,9 @@ def main(input_dir, training, num_opcodes, opcodes_json, output_dir):
     with open(output_path, 'w') as f_out:
         json.dump(o_dict, f_out)
         
-    output_path = os.path.join(output_dir, o_json2)
-    with open(output_path, 'w') as f_out:
-        json.dump(o_dict2, f_out)
+    # output_path = os.path.join(output_dir, o_json2)
+    # with open(output_path, 'w') as f_out:
+    #     json.dump(o_dict2, f_out)
 
 
 if __name__ == '__main__':

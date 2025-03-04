@@ -74,21 +74,21 @@ def update_config_datasetone(config_dict, outputdir, featuresdir):
     config_dict['testing'] = dict(
         full_tests_inputs=[
             # "../../../DBs/Dataset-1-new/pairs/testing/neg_rank5_testing_Dataset-1.csv",
-            "../../../DBs/Dataset-1-new/pairs/testing/neg_rank7_testing_Dataset-1.csv",
+            "../../../DBs/Dataset-1-new/pairs/testing/neg_rank3_testing_Dataset-1.csv",
             # "../../../DBs/Dataset-1-new/pairs/testing/neg_rank7_testing_Dataset-1.csv",
             # "../../../DBs/Dataset-1-new/pairs/testing/neg_testing_Dataset-1.csv",
             # "../../../DBs/Dataset-1-new/pairs/testing/pos_rank5_testing_Dataset-1.csv",
-            "../../../DBs/Dataset-1-new/pairs/testing/pos_rank7_testing_Dataset-1.csv",
+            "../../../DBs/Dataset-1-new/pairs/testing/pos_rank3_testing_Dataset-1.csv",
             # "../../../DBs/Dataset-1-new/pairs/testing/pos_rank7_testing_Dataset-1.csv",
             # "../../../DBs/Dataset-1-new/pairs/testing/pos_testing_Dataset-1.csv"
         ],
         full_tests_outputs=[
             # os.path.join(outputdir, "neg_rank5_testing_Dataset-1_sim.csv"),
-            os.path.join(outputdir, "neg_rank7_testing_Dataset-1_sim.csv"),
+            os.path.join(outputdir, "neg_rank3_testing_Dataset-1_sim.csv"),
             # os.path.join(outputdir, "neg_rank7_testing_Dataset-1_sim.csv"),
             # os.path.join(outputdir, "neg_testing_Dataset-1_sim.csv"),
             # os.path.join(outputdir, "pos_rank5_testing_Dataset-1_sim.csv"),
-            os.path.join(outputdir, "pos_rank7_testing_Dataset-1_sim.csv"),
+            os.path.join(outputdir, "pos_rank3_testing_Dataset-1_sim.csv"),
             # os.path.join(outputdir, "pos_rank7_testing_Dataset-1_sim.csv"),
             # os.path.join(outputdir, "pos_testing_Dataset-1_sim.csv")
         ],
@@ -290,10 +290,10 @@ def get_config(args):
         seed=11
     )
     
-    if args.robertamodel:
-        config_dict['bertmodel'] = SentenceTransformer(args.robertamodel)
-    else:
-        config_dict['bertmodel'] = None
+    # if args.robertamodel:
+    #     config_dict['bertmodel'] = SentenceTransformer(args.robertamodel)
+    # else:
+    config_dict['bertmodel'] = None
         
     if args.dataset == 'one':
         update_config_datasetone(

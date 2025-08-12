@@ -34,7 +34,7 @@ python get_idb.py --db1
 
 ```c
 cd microcode
-python get_mc.py -i idb_folder -o output_folder
+python run.py -i idb_folder -o output_folder
 ```
 
 

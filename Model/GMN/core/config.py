@@ -290,10 +290,10 @@ def get_config(args):
         seed=11
     )
     
-    # if args.robertamodel:
-    #     config_dict['bertmodel'] = SentenceTransformer(args.robertamodel)
-    # else:
-    config_dict['bertmodel'] = None
+    if args.robertamodel:
+        config_dict['bertmodel'] = SentenceTransformer(args.robertamodel)
+    else:
+        config_dict['bertmodel'] = None
         
     if args.dataset == 'one':
         update_config_datasetone(

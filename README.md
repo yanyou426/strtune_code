@@ -41,7 +41,14 @@ python run.py -i idb_folder -o output_folder
 
 ## Roberta
 
-pytorch_model.bin为微调后的roberta模型
+涉及数据在gsp23a:/home/kaiyanh/strtune_dataset/Roberta 路径下，需mv至该Roberta目录下
+
+```c
+cd Roberta
+conda activate sem2vec
+python src/run_roberta.py
+python src/fine_tune.py
+```
 
 
 
@@ -58,7 +65,7 @@ python gnn_preprocessing_cdg.py -i ../../../DBs/Dataset-1-new/features/testing/a
 
 ```c
 cd GMN
-python gnn.py --test -c ./model_checkpoint -o ./Dataset-1-new_testing --featuresdir ../strand -b ../../Roberta
+python gnn.py --test -c ./model_checkpoint -o ./Dataset-1-new_testing --featuresdir ../strand -b ../../Roberta/BERT-ft
 ```
 
 
